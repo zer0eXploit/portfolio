@@ -1,0 +1,28 @@
+.UpBtn {
+  position: fixed;
+  top: 79%;
+  right: 3%;
+  border-radius: 3px;
+  color: white;
+  background-color: black;
+  padding: 15px;
+  visibility: hidden;
+}
+
+.UpBtn {
+  cursor: pointer;
+}
+/* .UpBtn:hover {
+  color: white;
+  background-color: black;
+} */
+
+.show {
+  visibility: visible !important;
+}
+
+/* .reverse-color {
+  border: 2px solid white !important;
+  background-color: #202020 !important;
+  color: white !important;
+} */

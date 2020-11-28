@@ -1,0 +1,45 @@
+.HeroSection {
+  background-image: url("https://res.cloudinary.com/zer0exploit/image/upload/v1589776114/portfolio/desktop-hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+}
+
+.ArrowBorder {
+  border: 1px solid white;
+  height: 5rem;
+  width: 2rem;
+  /* border-radius: 45%; */
+  position: absolute;
+  cursor: pointer;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.DownArrow {
+  position: absolute;
+  cursor: pointer;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: jump 1.5s ease-out 1s infinite;
+}
+
+@media only screen and (max-width: 1024px) {
+  .HeroSection {
+    background-image: url("https://res.cloudinary.com/zer0exploit/image/upload/v1589777073/portfolio/mobile-hero.jpg");
+    background-attachment: scroll;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 15%;
+  }
+  100% {
+    top: 85%;
+  }
+}

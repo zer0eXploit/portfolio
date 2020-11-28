@@ -1,0 +1,127 @@
+/* Add a black background color to the top navigation */
+.Nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  padding: 3px;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  opacity: 0.78;
+}
+
+.Container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* Style the links inside the navigation bar */
+.Nav a {
+  color: rgb(166, 200, 206);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Add a color to the active/current link */
+.Active {
+  border-bottom: 3px solid rgb(219, 210, 210) !important;
+}
+
+.LinkButton {
+  background-color: transparent;
+  border: none;
+}
+
+.LinkButton:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .MyName {
+    display: none;
+  }
+  .Container {
+    width: 100%;
+  }
+}
+
+/* Toggler */
+.Switch {
+  position: relative;
+  display: inline-block;
+  -webkit-transform: translateY(-8%);
+  -ms-transform: translateY(-8%);
+  transform: translateY(-8%);
+  width: 40px;
+  height: 20px;
+}
+
+.Switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.Slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .Slider {
+  background-color: #202020;
+}
+
+input:checked + .Slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.TogglerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-right: 16px;
+}

@@ -1,65 +1,74 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useRef, useCallback, useEffect, useState } from "react";
+
+import Head from "next/head";
+import Layout from "../components/Layout";
+import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
+import Hero from "../components/Hero/Hero";
+import TextBox from "../components/TextBox/TextBox";
+import About from "../components/About/About";
+import Footer from "../components/Footer/Footer";
+import BackToTop from "../components/BackToTop/BackToTop";
 
 export default function Home() {
+  const progressBarRef = useRef();
+  const heroContentsRef = useRef();
+  const introEduRef = useRef();
+  const upBtnRef = useRef();
+
+  const scrollToHandler = useCallback(
+    (position) => {
+      if (position === undefined) {
+        position = heroContentsRef.current.scrollHeight - 62; // minus nav height
+      }
+      window.scroll({
+        top: position,
+        behavior: "smooth",
+      });
+    },
+    [heroContentsRef]
+  );
+
+  const scrollEventHandler = useCallback(() => {
+    if (upBtnRef.current !== null) {
+      // Shows/Hide the backToTop button
+      if (window.scrollY >= document.documentElement.clientHeight) {
+        upBtnRef.current.style.visibility = "visible";
+      } else {
+        upBtnRef.current.style.visibility = "hidden";
+      }
+
+      // Navbar scroll progress indicator
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      let height =
+        document.documentElement.scrollHeight -
+        heroContentsRef.current.scrollHeight;
+      let scrolled = (winScroll / height) * 100;
+      progressBarRef.current.style.width = scrolled + "%";
+    }
+  }, [upBtnRef, heroContentsRef, progressBarRef]);
+
+  useEffect(() => {
+    window.onscroll = scrollEventHandler;
+  }, [scrollEventHandler]);
+
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Yan Waipann | Developer</title>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <ScrollIndicator ref={progressBarRef} />
+      <Hero scrollTo={scrollToHandler}>
+        <TextBox ref={heroContentsRef} />
+      </Hero>
+      <About
+        ref={{
+          introEdu: introEduRef,
+        }}
+      />
+      <Footer />
+      <BackToTop ref={upBtnRef} scrollTo={scrollToHandler} />
+    </Layout>
+  );
 }

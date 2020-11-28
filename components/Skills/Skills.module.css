@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 0.3rem;
+}
+
+.skills {
+  text-align: center;
+  color: white;
+}
+
+.html {
+  height: 0.5rem;
+  width: 43%;
+  border-radius: 0.3rem;
+  background-color: #5e5d4d;
+}
+
+.css {
+  height: 0.5rem;
+  width: 40%;
+  border-radius: 0.3rem;
+  background-color: #5e5d4d;
+}
+
+.js {
+  height: 0.5rem;
+  width: 49%;
+  border-radius: 0.3rem;
+  background-color: #5e5d4d;
+}
+
+.python {
+  height: 0.5rem;
+  border-radius: 0.3rem;
+  width: 40%;
+  background-color: #5e5d4d;
+}
+
+.mongodb {
+  height: 0.5rem;
+  width: 35%;
+  border-radius: 0.3rem;
+  background-color: #5e5d4d;
+}
+
+.psql {
+  height: 0.5rem;
+  border-radius: 0.3rem;
+  width: 35%;
+  background-color: #5e5d4d;
+}

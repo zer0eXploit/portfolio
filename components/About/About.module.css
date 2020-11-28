@@ -1,0 +1,13 @@
+.About {
+  margin: 2rem;
+  text-align: left;
+}
+
+.Container {
+  display: block;
+}
+
+.About a {
+  /* text-decoration: none; */
+  color: rgb(138, 151, 153);
+}

@@ -1,0 +1,50 @@
+.Projects {
+  margin-top: 62px;
+  padding: 1rem;
+}
+
+.AdditionalInfo {
+  display: block;
+  background-color: rgb(156, 155, 153);
+  padding: 1rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.MoreProjectsLink {
+  color: rgb(166, 200, 206);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .GridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* grid-gap: 3.33%; */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .GridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* grid-gap: 3.33%; */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .GridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-gap: 3.33%; */
+    justify-content: center;
+    align-items: center;
+  }
+}

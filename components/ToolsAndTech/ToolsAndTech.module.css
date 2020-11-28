@@ -1,0 +1,19 @@
+.Container {
+  margin-top: -15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .Container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .Container {
+    display: block;
+  }
+}
