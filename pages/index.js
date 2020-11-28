@@ -9,6 +9,8 @@ import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import BackToTop from "../components/BackToTop/BackToTop";
 
+import smoothscroll from "smoothscroll-polyfill";
+
 export default function Home() {
   const progressBarRef = useRef();
   const heroContentsRef = useRef();
@@ -50,7 +52,8 @@ export default function Home() {
 
   useEffect(() => {
     window.onscroll = scrollEventHandler;
-  }, [scrollEventHandler]);
+    smoothscroll.polyfill();
+  }, [scrollEventHandler, smoothscroll]);
 
   return (
     <Layout>
