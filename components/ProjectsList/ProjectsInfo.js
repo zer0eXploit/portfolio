@@ -5,7 +5,7 @@ export const projectsInfo = [
       "https://res.cloudinary.com/zer0exploit/image/upload/v1605275167/portfolio/MYANnime_j1jwuo.jpg",
     title: "MYANnime",
     explaination:
-      "MYANnime (မြန်နီမေး) is an anime streaming site built with React with the help of Material-UI React library. It uses React Routing, Redux and React Hooks. The app is powered by FLASK RESTFul API, which is also built from the ground up. It includes a custom CMS, JWT authentication, email verification etc.",
+      "MYANnime is an anime streaming site built with React with the help of Material-UI React library. It uses React Routing, Redux and React Hooks. The app is powered by FLASK RESTFul API, which is also built from the ground up. It includes a custom CMS, JWT authentication, email verification etc.",
     projectUrl: "https://myannime.netlify.app/",
   },
   {
