@@ -21,7 +21,10 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="icon" href="/images/fav.png" />
         <meta name="description" content="Yan Waipann's Portfolio" />
-        <meta property="og:image" content="/images/og.jpeg" />
+        <meta
+          property="og:image"
+          content="https://yanwaipann.tech/images/og.jpeg"
+        />
         <meta name="og:title" content="Yan Waipann | Developer" />
         <meta name="twitter:card" content="summary_large_image" />
         <link
