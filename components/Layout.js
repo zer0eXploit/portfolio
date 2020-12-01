@@ -19,12 +19,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/fav.png" />
+        <link rel="icon" href="/images/fav.png" />
         <meta name="description" content="Yan Waipann's Portfolio" />
-        <meta
-          property="og:image"
-          content="https://github.com/zer0eXploit/zer0eXploit.github.io/settings/og-template"
-        />
+        <meta property="og:image" content="/images/og.jpeg" />
         <meta name="og:title" content="Yan Waipann | Developer" />
         <meta name="twitter:card" content="summary_large_image" />
         <link
