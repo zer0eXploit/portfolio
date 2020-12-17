@@ -7,7 +7,7 @@ const projectCard = (props) => {
     <div className={styles.Card}>
       <Image
         src={props.imgUrl}
-        alt="Project-Avatar"
+        alt={props.title}
         width={1350}
         height={664}
         style={{ width: "100%" }}
