@@ -5,7 +5,13 @@ import styles from "./ProjectCard.module.css";
 const projectCard = (props) => {
   return (
     <div className={styles.Card}>
-      <Image src={props.imgUrl} alt="Avatar" style={{ width: "100%" }} />
+      <Image
+        src={props.imgUrl}
+        alt="Project-Avatar"
+        width={1350}
+        height={664}
+        style={{ width: "100%" }}
+      />
       <h3>{props.title}</h3>
       <div className={styles.CardDescription}>
         <p>{props.explaination}</p>

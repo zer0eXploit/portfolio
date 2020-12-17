@@ -10,7 +10,8 @@ const hero = (props) => {
         <Image
           alt="down"
           src="https://res.cloudinary.com/zer0exploit/image/upload/v1606553288/portfolio/arrow-down_dzvpfq.svg"
-          width="30px"
+          width={30}
+          height={78}
           className={styles.DownArrow}
         />
       </div>
