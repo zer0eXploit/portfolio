@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 
 const projectCard = (props) => {
   return (
     <div className={styles.Card}>
-      <img src={props.imgUrl} alt="Avatar" style={{ width: "100%" }} />
+      <Image src={props.imgUrl} alt="Avatar" style={{ width: "100%" }} />
       <h3>{props.title}</h3>
       <div className={styles.CardDescription}>
         <p>{props.explaination}</p>
