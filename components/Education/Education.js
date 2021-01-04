@@ -11,7 +11,7 @@ const education = () => {
         </a>
         <br />
         <br />
-        {"{Expected Graduation }"} March-2022.
+        {"{ Expected Graduation }"} March-2022.
       </h3>
     </div>
   );
