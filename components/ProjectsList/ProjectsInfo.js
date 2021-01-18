@@ -6,7 +6,7 @@ export const projectsInfo = [
     title: "MYANnime",
     explaination:
       "MYANnime is an anime streaming site built with React with the help of Material-UI React library. It uses React Routing, Redux and React Hooks. The app is powered by FLASK RESTFul API, which is also built from the ground up. It includes a custom CMS, JWT authentication, email verification etc.",
-    projectUrl: "https://myannime.netlify.app/",
+    projectUrl: "https://myanime-d5de4.web.app/",
   },
   {
     id: "smart-brain",
