@@ -28,13 +28,13 @@ export const projectsInfo = [
     projectUrl: "https://mr-companion.herokuapp.com/",
   },
   {
-    id: "puusuu-bar-lar-lar-sub",
+    id: "poo-suu",
     imgUrl:
-      "https://res.cloudinary.com/zer0exploit/image/upload/v1589781744/portfolio/puusuu_huieen.jpg",
-    title: "Puu Suu Bar Lar Lar Sub",
+      "https://res.cloudinary.com/zer0exploit/image/upload/v1622481299/portfolio/Poo_Suu_mcvwtk.jpg",
+    title: "Poo Suu",
     explaination:
-      "Music video streaming site. It is my hobby project. Backend is written with ExpressJS and database as MongoDB.",
-    projectUrl: "https://puusuu.herokuapp.com/home",
+      "Music video lyrics translation site. It is my hobby project. Backend is written with ExpressJS and database as MongoDB.",
+    projectUrl: "https://poosuu.herokuapp.com/home",
   },
   {
     id: "magic-dropbox",
